@@ -22,4 +22,4 @@ for i in left:
         summ += i*dictt[i]
     else:
         summ += 0
-print(summ)
+print(summ) # 20351745

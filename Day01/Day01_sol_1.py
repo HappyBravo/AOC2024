@@ -6,8 +6,8 @@ right = []
 
 with open(input_file, "r") as f:
     input_data = f.readlines()
-    input_data = [(left.append(int(line.strip().split()[0])), 
-                   right.append(int(line.strip().split()[1]))) 
+    input_data = [(left.append(int(line.split()[0])), 
+                   right.append(int(line.split()[1]))) 
                         for line in input_data]
 
 left.sort()
@@ -18,4 +18,4 @@ assert(len(left) == len(right))
 summ = 0
 for l, r in zip(left, right):
     summ += abs(l-r)
-print(summ)
+print(summ) # 1579939
