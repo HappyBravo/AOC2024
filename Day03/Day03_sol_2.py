@@ -4,10 +4,7 @@ input_data = []
 with open(input_file, "r") as f:
     input_data = f.readlines()
 
-toDos = []
-lines = []
-
-def mul(line=""):
+def mul(line=""): # TAKEN FROM DAY3, SOL1
     summ = 0
     if "mul(" in line: 
         splitted = [splitt.split(')') for splitt in line.strip().split('mul(')]
@@ -19,7 +16,7 @@ def mul(line=""):
                 num1 = int(nums[0])
                 num2 = int(nums[1])
                 summ += num1*num2
-                print(f"{num1} x {num2} = {num1*num2}")
+                # print(f"{num1} x {num2} = {num1*num2}")
 
             except Exception as e:
                 # print(f"Exception {e}")
