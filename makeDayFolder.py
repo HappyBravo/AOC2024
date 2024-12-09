@@ -61,7 +61,7 @@ f"""input_file = "{os.path.basename(inputFiles[0])}"
 input_data = []
 
 with open(input_file, "r") as f:
-    input_data = f.readlines()
+    input_data = [_.strip() for _ in f.readlines()]
 """
         with open(filee, "w", encoding="utf-8") as _f:
             _f.write(buff)
